@@ -17,6 +17,7 @@
 
   <link rel="stylesheet" href="http://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/themes/css/cartodb.css">
   <link rel="stylesheet" href="http://cartodb.github.io/odyssey.js/sandbox/css/slides.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="override.css">
   <script src="http://cartodb.github.io/odyssey.js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
@@ -24,6 +25,9 @@
   <div id="map" style="width: 100%; height: 100%;"></div>
 
   <div id="slides_container" style="display:block;">
+
+    <button id="toggler"></button>
+
     <div id="dots"></div>
 
     <div id="slides"></div>
@@ -36,6 +40,7 @@
 
   <div id="credits">
     <span class="title" id="title">Title</span>
+    <br class="visible-small">
     <span class="author"><strong id="author">By Name using</strong> <a href="http://cartodb.github.io/odyssey.js/">Odyssey.js</a><span>
   </span></span></div>
 
@@ -242,6 +247,10 @@
         this.seq.current(n);
       }
     });
+
+    document.getElementById('toggler').addEventListener('click', function(evt) {
+      document.getElementById('slides_container').classList.toggle('collapsed');
+    });
   </script>
 
   <script>
@@ -294,8 +303,8 @@ L.marker([25.012987, 121.536809]).actions.addRemove(S.map)
 # CCCA × NTUOSC
 ```
 L.marker([24.787755, 120.997885]).actions.addRemove(S.map)
-- center: [24.9686, 121.1919]
-- zoom: 16
+- center: [24.7912, 120.9979]
+- zoom: 15 <!-- a workaround due to lack of image data -->
 ```
 
 第二場【大開源計劃】以交流的方式進行，由[交大網路福利社](http://www.nba.nctu.edu.tw)與[臺大開源社](https://ntuosc.org)共同舉辦。臺大開源社社長 RSChiang 主講[「衣櫥裡的 QML」](https://www.facebook.com/groups/169489583068057/permalink/1039375029412837/)，愉快地與大家講解 QML 的開發技巧。
