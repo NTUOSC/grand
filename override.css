@@ -7,7 +7,6 @@ html, body,
 #slides_container h1, #slides_container h2, #slides_container h3,
 #slides_container h4, #slides_container h5, #slides_container h6 {
   font-family: "Open Sans", "PT Sans", "Trebuchet MS", "Source Han Sans TC", "Noto Sans T Chinese", "Pingfang TC", "LiHei Pro", "Microsoft Jhenghei", sans-serif;
-  font-weight: bold;
 }
 
 #slides_container li {
