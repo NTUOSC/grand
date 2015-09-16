@@ -22,7 +22,7 @@
 }
 
 #slides_container {
-  transition: top 400ms ease-out;
+  transition: top 400ms ease-out, transform 400ms ease-out;
 }
 
 .visible-small {
@@ -38,7 +38,9 @@
   }
 
   #slides_container.collapsed {
-    top: calc(100% - 120px);
+      top: 100%;
+      transform: translateY(-120px);
+      -webkit-transform: translateY(-120px);
   }
 
   #toggler {
