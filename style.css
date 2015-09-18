@@ -1,0 +1,64 @@
+#slides {
+  overflow: hidden;
+}
+
+#toggler {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  /* reset styling */
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2em;
+  transform: rotate(90deg); /* downward */
+  -webkit-transform: rotate(90deg);
+  transition: transform 200ms ease-out;
+}
+
+#toggler:before {
+  content: '»';
+}
+
+#slides_container {
+  transition: top 400ms ease-out, transform 400ms ease-out;
+}
+
+.visible-small {
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  #slides_container {
+    right: 40px;
+    max-height: 75vh;
+    width: auto;
+  }
+
+  #slides_container.collapsed {
+      top: 100%;
+      transform: translateY(-120px);
+      -webkit-transform: translateY(-120px);
+  }
+
+  #toggler {
+    display: block;
+  }
+
+  #slides_container.collapsed #toggler {
+    transform: rotate(270deg); /* upward */
+    -webkit-transform: rotate(270deg);
+  }
+
+  /* wrap the credits section to prevent overlapping */
+  div#credits span {
+    padding-top: 9px; /* half */
+  }
+
+  .visible-small {
+    display: inline;
+  }
+}
+
